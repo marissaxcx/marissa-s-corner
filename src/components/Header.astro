@@ -1,0 +1,82 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav>
+				<div class="site-title">
+			<img src="/images/marissa_sanrio_sunset_coding_cyan_arora_borealis_--v_7_a49cb656-ce66-4dc3-a7b2-b1540637eeed_3.png" alt="Hello Kitty coding" class="header-image">
+			<h2><a href="/">{SITE_TITLE}</a></h2>
+		</div>
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/portfolio">Portfolio</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+		<div class="social-links">
+			<a href="https://weaveyapp.com" target="_blank">Weavey App</a>
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: var(--yellow);
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		border-bottom: 2px solid var(--pink);
+	}
+	.site-title {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+	.header-image {
+		height: 40px;
+		width: auto;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
+	.social-links a {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+	.social-links svg {
+		width: 24px;
+		height: 24px;
+		color: var(--black);
+	}
+	.social-links a:hover svg {
+		color: var(--pink);
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
+</style>

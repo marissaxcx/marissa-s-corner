@@ -1,0 +1,51 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Welcome to my corner of the internet</h1>
+			<div class="project-announcement">
+				<h2>I'm currently working on an app called Briefing Bunny!</h2>
+				<p class="release-date">Look for it on the iOS App Store in April!</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	body {
+		background-image: url('/images/marissa_kawaii_pastel_bunny_sunset_sanrio_hot_pink_--v_7_7a43a430-e5dc-4d49-a6d9-32806d20d1f6_3.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	.project-announcement {
+		text-align: center;
+		margin-top: 2em;
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 1em;
+		border-radius: 12px;
+	}
+
+	h1 {
+		color: var(--cyan);
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	}
+	.project-announcement h2,
+	.project-announcement .release-date {
+		color: rgb(var(--gray-dark));
+		text-shadow: none;
+	}
+</style>

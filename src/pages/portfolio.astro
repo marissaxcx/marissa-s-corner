@@ -1,0 +1,16 @@
+---
+import BlogPost from '../layouts/BlogPost.astro';
+---
+
+<BlogPost title="Marissa's Portfolio" description="My portfolio" pubDate={new Date()}>
+	<p>My recent app:</p>
+	<ul>
+		<li><a href="https://weaveyapp.com" target="_blank">Weavey App</a></li>
+	</ul>
+</BlogPost>
+
+<style>
+	li a {
+		color: var(--accent-dark);
+	}
+</style>
